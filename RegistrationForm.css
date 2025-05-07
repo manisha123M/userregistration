@@ -71,11 +71,10 @@ body {
     color: #0d0d0e;
   text-align:left;
   }
-  body{
+  body {
     text-align: center;
-    background-image: url('https://st.depositphotos.com/2828735/3425/i/450/depositphotos_34255947-stock-photo-purple-abstract-background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(to bottom, #6ab7ff, #fff); /* Light blue to white gradient */
   }
-
+  
+  
   
