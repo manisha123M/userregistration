@@ -1,0 +1,34 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .dashboard-header {
+    background-color: #282c34;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .dashboard-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .dashboard-main button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .dashboard-footer {
+    background-color: #222;
+    color: #aaa;
+    text-align: center;
+    padding: 10px;
+  }
