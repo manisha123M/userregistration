@@ -68,7 +68,7 @@ useEffect(() => {
     <div className="primary-page">
       <Header />
       <main className="content">
-        <h1>Primary Classes (1 - 6)</h1>
+        <h1> Classes 7th standard to 8th Standard</h1>
 
         <div className="video-section">
           <h2>Lesson {currentVideoIndex + 1}</h2>
