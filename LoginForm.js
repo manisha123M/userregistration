@@ -24,27 +24,30 @@ function LoginForm() {
       alert('Please enter both email and password.');
       return;
     }
-
+  
     try {
       const response = await fetch('http://localhost:5000/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-
+  
       if (response.ok) {
         alert('Login successful!');
+  
+    
+        localStorage.setItem('userEmail', email);
+  
         navigate('/dashboard');
-        // Redirect to a protected page or home
       } else {
         alert('Login failed.');
-      
       }
     } catch (error) {
       console.error('Error:', error);
       alert('Error logging in.');
     }
   };
+  
 
   return (
     <div className="form-container">
