@@ -1,0 +1,78 @@
+.video-section{
+    margin-bottom: 2rem;
+}
+
+.feedback-section{
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+}
+
+.feedback-section h3 {
+    margin-bottom: 1rem;
+  }
+
+.feedback-section textarea {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+  }
+  
+.feedback-section button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .star{
+    display:flex;
+    justify-content:center;
+    gap: 13px;
+  }
+  span{
+    font-size:55px;
+    cursor:pointer;
+  }
+  .stars span {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .colored {
+    color: gold;
+  }
+  
+  .uncolored {
+    color: lightgray;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 20%; 
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .video-container iframe {
+    display: block;
+    max-width: 100%;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+   
+  
