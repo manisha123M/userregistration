@@ -1,1 +1,120 @@
-user reg form
+# 🛡️ User Registration System
+
+[![Build](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/your-username/your-repo-name/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Made with React](https://img.shields.io/badge/Frontend-React-blue)](https://reactjs.org)
+[![Made with Express](https://img.shields.io/badge/Backend-Express.js-green)](https://expressjs.com)
+[![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-336791.svg?logo=postgresql)](https://www.postgresql.org/)
+
+A full-stack user registration and login system using **React**, **Node.js (Express)**, and **PostgreSQL**. Focused on secure authentication and data protection.
+
+----
+
+## 🚀 Tech Stack
+
+| Frontend | Backend           | Database   |
+| -------- | ----------------- | ---------- |
+| React    | Node.js + Express | PostgreSQL |
+
+---
+
+## ✨ Features
+
+* 🔐 Encrypted email storage
+* 🔏 Password validation on registration
+* 📄 Forms:
+  * Register: name, section, email, password, address
+  * Login: email, password
+* 🧭 Dashboard with placeholder buttons (UI in progress)
+* 🎨 Custom CSS styling (no HTML files used)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 📁 Clone the Repository
+
+```
+git clone https://github.com/manisha123M/userregistration.git
+cd userregistration
+```
+
+---
+
+### 🛠️ Backend Setup
+
+1. Navigate to backend directory:
+
+   ```
+   cd backend
+   ```
+
+2. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+3. Create a `.env` file:
+
+   ```
+   DB_USER=your_pg_username
+   DB_PASSWORD=your_pg_password
+   DB_NAME=your_database_name
+   DB_HOST=localhost
+   DB_PORT=5432
+   ```
+
+4. Start the server:
+
+   ```
+   npm start
+   ```
+
+---
+
+### 🎨 Frontend Setup
+
+1. Navigate to frontend directory:
+
+   ```
+   cd ../frontend
+   ```
+
+2. Install dependencies:
+
+   ```
+   npm install
+   ```
+
+3. Start the frontend:
+
+   ```
+   npm start
+   ```
+
+Visit:
+🔗 `http://localhost:3000` — React frontend
+🔗 `http://localhost:5000` — Express backend
+
+---
+
+## 🔧 Project Status
+
+🚧 Work is in progress
+🛠️ Features like dashboard functionality, improved validation, and session handling will be added soon.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 💬 Contact
+
+Feel free to open an issue or connect via GitHub if you have feedback or suggestions.
+
+---
+
