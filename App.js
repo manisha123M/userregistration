@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route,Navigate } from 'react-router-do
 import RegistrationForm from './RegistrationForm';
 import LoginForm from './LoginForm'; 
 import DashboardPage from './DashboardPage';
+import PrimaryPage from './PrimaryPage';
+import SecondaryPage from './SecondaryPage';
+import HighSchoolPage from './HighSchoolPage';
 
 
 function App() {
@@ -12,8 +15,12 @@ function App() {
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegistrationForm />} />
         <Route path="/dashboard" element={<DashboardPage />}/>
+        <Route path="/primary" element={<PrimaryPage/>}/>
+        <Route path="/seconday" element={<SecondaryPage/>}/>
+        <Route path="/seniors" element={<HighSchoolPage/>}/>
       </Routes>
     </Router>
+
   );
 }
 
