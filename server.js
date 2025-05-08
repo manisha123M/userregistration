@@ -73,3 +73,24 @@ app.post('/login', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
+app.post('/primary-feedback', async (req, res) => {
+  const { email, lessonNumber, rating, feedback } = req.body;
+
+  try {
+    // Optional: Validate input
+    if (!email || !lessonNumber || !rating || !feedback) {
+      return res.status(400).send('All fields are required');
+    }
+
+    await pool.query(
+      'INSERT INTO video_feedback (email, lesson_number, rating, feedback) VALUES ($1, $2, $3, $4)',
+      [email, lessonNumber, rating, feedback]
+    );
+
+    res.status(200).send('Feedback submitted successfully');
+  } catch (err) {
+    console.error('Error saving feedback:', err);
+    res.status(500).send('Server error while saving feedback');
+  }
+});
