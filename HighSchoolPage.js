@@ -24,9 +24,9 @@ useEffect(() => {
 
   const videoUrls = [
     'https://www.youtube.com/embed/s7j84alG-6Q',
-    'https://www.youtube.com/embed/3igl7rqBpJE',
-    'https://www.youtube.com/embed/-yCoIiMXDMI',
-    'https://www.youtube.com/embed/a86niKCT6p0',
+    // 'https://www.youtube.com/embed/3igl7rqBpJE',
+    // 'https://www.youtube.com/embed/-yCoIiMXDMI',
+    // 'https://www.youtube.com/embed/a86niKCT6p0',
   ];
 
   const handleSubmit = async (e) => {
@@ -48,7 +48,7 @@ useEffect(() => {
         setRating(0);
         setFeedback('');
       } else {
-        alert('Failed to submit feedback');
+        alert('Failed to submit feedback please provide rating');
       }
     } catch (error) {
       console.error('Feedback error:', error);
@@ -68,7 +68,7 @@ useEffect(() => {
     <div className="primary-page">
       <Header />
       <main className="content">
-         <h1>Primary Classes  10th -12th </h1> 
+        {/* <h1>Primary Classes (1 - 6)</h1> */}
 
         <div className="video-section">
           <h2>Lesson {currentVideoIndex + 1}</h2>

@@ -118,33 +118,25 @@ if (!emailPattern.test(formData.email)) {
 
         <label>Password:</label>
         <div className="password-wrapper">
-          <input 
-            type={showPassword ? 'text' : 'password'}
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required 
-          />
+  <input 
+    type={showPassword ? 'text' : 'password'}
+    name="password"
+    value={formData.password}
+    onChange={handleChange}
+    onDoubleClick={() => {
+      setShowPassword(true);
+      setTimeout(() => setShowPassword(false), 10000); 
+    }}
+    required 
+  />
 
-<PasswordChecklist
-                rules={[
-                    "minLength",
-                    "specialChar",
-                    "number",
-                    "capital",
-                ]}
-                minLength={5}
-                value={formData.password}
-            />
+  <PasswordChecklist
+    rules={["minLength", "specialChar", "number", "capital"]}
+    minLength={5}
+    value={formData.password}
+  />
+</div>
 
-          <button 
-            type="button" 
-            onClick={() => setShowPassword(prev => !prev)}
-            className="toggle-password"
-          >
-            {showPassword ? '' : ''}
-          </button>
-        </div>
 
         <button type="submit">Submit</button>
       </form>

@@ -12,9 +12,12 @@ function AnimatedBackground() {
       let circles = [];
       const numCircles = 50;
       const colors = [
-        'rgba(61, 127, 202, 0.41)',
-        'rgba(194, 75, 228, 0.41)',
-        'rgba(87, 74, 205, 0.41)',
+          'rgba(255, 255, 150, 0.22)',
+          'rgba(255, 230, 100, 0.22)', 
+         'rgba(255, 200, 50, 0.22)',
+        // 'rgba(47, 117, 122, 0.22)',
+        // 'rgba(194, 75, 228, 0.22)',
+        // 'rgba(87, 74, 205, 0.22)',
       ];
   
       function createCircle(x, y, radius, color) {
@@ -47,13 +50,30 @@ function AnimatedBackground() {
           if (circle.opacity < 1) {
             circle.opacity += circle.fadeSpeed;
           }
+      
+          const gradient = ctx.createRadialGradient(
+            circle.x,
+            circle.y,
+            0,
+            circle.x,
+            circle.y,
+            circle.radius
+          );
+          const colorWithOpacity = circle.color.replace(/, \d\.\d+\)$/, `, ${circle.opacity})`);
+          gradient.addColorStop(0, colorWithOpacity);
+          gradient.addColorStop(1, circle.color.replace(/, \d\.\d+\)$/, `, 0)`));
+      
           ctx.beginPath();
           ctx.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2);
-          ctx.fillStyle = circle.color.replace(/, \d\.\d+\)$/, `, ${circle.opacity})`);
+          ctx.fillStyle = gradient;
+          ctx.shadowBlur = 25;
+          ctx.shadowColor = colorWithOpacity;
           ctx.fill();
           ctx.closePath();
         });
       }
+      
+      
   
       function updateCircles() {
         circles.forEach((circle) => {
