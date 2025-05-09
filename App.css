@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Everything is a child of this node, so set its height to take up the full page or more, then set some padding at the bottom so your footer can slip into the gap. */
+#root {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 20px;
+}
+
+.Header {
+ position: relative;
+ height: 100px;
+ width: 100%;
+}
+
+.Main {
+  text-align: center;
+  position: relative;
+}
+
+/* Now set the height of your Footer equal to the padding that you left for it in your #root.  To make it stay at the bottom, you will set it to be absolutely positioned.  If Main grows larger, your Footer will move down to remain at the bottom of the page. */ 
+.Footer {
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
